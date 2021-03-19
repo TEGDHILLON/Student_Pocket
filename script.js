@@ -264,12 +264,10 @@ btnLogin.addEventListener('click', function (e) {
       hour: 'numeric',
       minute: 'numeric',
       day: 'numeric',
-      month: 'numeric',
+      month: 'long',
       year: 'numeric',
-      // weekday: 'long',
+      weekday: 'long',
     };
-    // const locale = navigator.language;
-    // console.log(locale);
 
     labelDate.textContent = new Intl.DateTimeFormat(
       currentAccount.locale,
@@ -363,7 +361,6 @@ btnClose.addEventListener('click', function (e) {
 let sorted = false;
 btnSort.addEventListener('click', function (e) {
   e.preventDefault();
-  // BUG in video:
   // displayMovements(currentAccount.movements, !sorted);
 
   // FIX:
